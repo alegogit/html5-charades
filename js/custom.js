@@ -8,8 +8,10 @@ $("#worddiv").css('top',twT);
 var words = [];
 words[1] = 'Anjing &#128021;';
 words[2] = 'Babi &#128055'; // 128023
-words[3] = 'Kampret';
-words[4] = 'Wedhus &#128016 ';
+//words[3] = 'Kampret';
+words[3] = 'Tikus &#128000';
+//words[4] = 'Wedhus &#128016 ';
+words[4] = 'Kambing &#128016 ';
 words[5] = 'Monyet &#128053';
 var mn = 1;
 var mx = 5;
@@ -42,7 +44,6 @@ function existRuns(min,cur,run){
 function randomRun(min,max){
 	var runs = [];
 	var r = randomInt(min,max);
-	//runs[0] = 0; 
 	for(j=min;j<=max;j++){
 		do {
 			r = randomInt(min,max);
@@ -91,7 +92,7 @@ function deviceOrientationHandler(o,orientation,min,max){
 		} 
 		updData(min,max);
 		localStorage.setItem("stats["+cr+"]",1);
-		console.log(o+' '+orientation);
+		//console.log(o+' '+orientation);
 	}	
 	if((orientation<=45)&&(o>45)){	
 		if(localStorage.getItem("startgame")!=0){
@@ -105,20 +106,36 @@ function getSecFromNow(sec) {
 }
 function updData(min,max){
 	var timeleft = $("#playtime").text();
-	if(timeleft!='00:00'){
-		cr = parseInt(localStorage.getItem("runs")); //current runs
-		if(cr<max){
-			do {
-				cr = cr + 1;
-			} while ((localStorage.getItem("stats["+cr+"]")==1));
+	var completed = getCompleted(min,max);
+	if(completed!=((max-min)+1)){
+		if(timeleft!='00:00'){
+			cr = parseInt(localStorage.getItem("runs")); //current runs
+			if(cr<max){
+				do {
+					cr = cr + 1;
+				} while ((localStorage.getItem("stats["+cr+"]")==1));
+			} else {
+				cr = min;
+			}
+			$('#theword').html(localStorage.getItem("words["+getRanks(cr)+"]"));
+			localStorage.setItem("runs",cr);
 		} else {
-			cr = min;
+			timeIsUp();
 		}
-		$('#theword').html(localStorage.getItem("words["+getRanks(cr)+"]"));
-		localStorage.setItem("runs",cr);
 	} else {
-		timeIsUp();
+		$("#playtime").countdown('stop');
+		//$('#playtime').text(timeleft);
+		$('h1.tobehide').text('Sisa waktu:').show();
+		$('#theword').text('Selamat, semua kejawab!'); 
+		$('body').css('background','#197cd9');
 	}
+}
+function getCompleted(min,max){
+	var tc = 0;	
+	for(c=min;c<=max;c++){
+		tc = tc + parseInt(localStorage.getItem('stats['+c+']'));
+	}
+	return tc;
 }
 function timeIsUp(){
 	$('#theword').text('Waktu Habis!'); //time's up
