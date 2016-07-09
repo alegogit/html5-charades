@@ -1,0 +1,12 @@
+body{
+	background: #197cd9;
+	color: #fff;
+}
+#worddiv{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.smaller{
+	font-size: smaller;
+}

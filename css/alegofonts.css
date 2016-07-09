@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'alegofonts';
+  src: url('../fonts/alegofonts.eot?86883845');
+  src: url('../fonts/alegofonts.eot?86883845#iefix') format('embedded-opentype'),
+       url('../fonts/alegofonts.woff2?86883845') format('woff2'),
+       url('../fonts/alegofonts.woff?86883845') format('woff'),
+       url('../fonts/alegofonts.ttf?86883845') format('truetype'),
+       url('../fonts/alegofonts.svg?86883845#alegofonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'alegofonts';
+    src: url('../fonts/alegofonts.svg?16419885#alegofonts') format('svg');
+  }
+}
+*/
+ 
+ [class^="af-"]:before, [class*=" af-"]:before {
+  font-family: "alegofonts";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.af-cap:before { content: '\e800'; } /* '' */
+.af-cart:before { content: '\e801'; } /* '' */
+.af-deliver-laundry:before { content: '\e802'; } /* '' */
+.af-female:before { content: '\e803'; } /* '' */
+.af-folded-shirts:before { content: '\e804'; } /* '' */
+.af-fresherner:before { content: '\e805'; } /* '' */
+.af-gift:before { content: '\e806'; } /* '' */
+.af-hanger:before { content: '\e807'; } /* '' */
+.af-hanger-alt:before { content: '\e808'; } /* '' */
+.af-hat-becak:before { content: '\e809'; } /* '' */
+.af-hat-female:before { content: '\e80a'; } /* '' */
+.af-hat-male:before { content: '\e80b'; } /* '' */
+.af-iron:before { content: '\e80c'; } /* '' */
+.af-kg:before { content: '\e80d'; } /* '' */
+.af-laundry-basket:before { content: '\e80e'; } /* '' */
+.af-laundry-basket-1:before { content: '\e80f'; } /* '' */
+.af-laundry-basket-2:before { content: '\e810'; } /* '' */
+.af-pick-up-laundry:before { content: '\e811'; } /* '' */
+.af-plus-minus:before { content: '\e812'; } /* '' */
+.af-rp:before { content: '\e813'; } /* '' */
+.af-o-logo:before { content: '\e814'; } /* '' */
+.af-package-opened:before { content: '\e815'; } /* '' */
+.af-package-plus:before { content: '\e816'; } /* '' */
+.af-shirts-folded:before { content: '\e817'; } /* '' */
+.af-paket-langganan:before { content: '\e818'; } /* '' */
+.af-package:before { content: '\e819'; } /* '' */
+.af-male:before { content: '\e81a'; } /* '' */
+.af-kupluk:before { content: '\e81b'; } /* '' */
+.af-paket-jeans:before { content: '\e81c'; } /* '' */
+.af-paket-cipatka:before { content: '\e81d'; } /* '' */
+.af-paket-jas:before { content: '\e81e'; } /* '' */
+.af-paket-cipat:before { content: '\e81f'; } /* '' */
+.af-paket-cipatkangi:before { content: '\e820'; } /* '' */
+.af-o-pin:before { content: '\e821'; } /* '' */
+.af-o-machine:before { content: '\e822'; } /* '' */
+.af-o-m2:before { content: '\e823'; } /* '' */
+.af-o-logo-machine:before { content: '\e824'; } /* '' */
+.af-olaundrette:before { content: '\e825'; } /* '' */
+.af-bleach-bottle:before { content: '\e826'; } /* '' */
+.af-alegodroid:before { content: '\e827'; } /* '' */
+.af-bra:before { content: '\e828'; } /* '' */
+.af-cardigan:before { content: '\e829'; } /* '' */
+.af-dress:before { content: '\e82a'; } /* '' */
+.af-hem:before { content: '\e82b'; } /* '' */
+.af-hem-long:before { content: '\e82c'; } /* '' */
+.af-hot-pants:before { content: '\e82d'; } /* '' */
+.af-hoodie:before { content: '\e82e'; } /* '' */
+.af-jacket:before { content: '\e82f'; } /* '' */
+.af-jacket-o:before { content: '\e830'; } /* '' */
+.af-jeans-female:before { content: '\e831'; } /* '' */
+.af-jeans-male:before { content: '\e832'; } /* '' */
+.af-lingerie:before { content: '\e833'; } /* '' */
+.af-polo-shirts:before { content: '\e834'; } /* '' */
+.af-bikini:before { content: '\e835'; } /* '' */
+.af-blazer-female:before { content: '\e836'; } /* '' */
+.af-blouse:before { content: '\e837'; } /* '' */
+.af-shorts:before { content: '\e838'; } /* '' */
+.af-singlet:before { content: '\e839'; } /* '' */
+.af-short-pants:before { content: '\e83a'; } /* '' */
+.af-trousers:before { content: '\e83b'; } /* '' */
+.af-skirts:before { content: '\e83c'; } /* '' */
+.af-sports-bra:before { content: '\e83d'; } /* '' */
+.af-socks:before { content: '\e83e'; } /* '' */
+.af-suit-o:before { content: '\e83f'; } /* '' */
+.af-t-shirts:before { content: '\e840'; } /* '' */
+.af-t-shirts-female:before { content: '\e841'; } /* '' */
+.af-thong:before { content: '\e842'; } /* '' */
+.af-under-pants:before { content: '\e843'; } /* '' */
+.af-t-shirts-kids:before { content: '\e844'; } /* '' */
+.af-suit:before { content: '\e845'; } /* '' */
+.af-sweater:before { content: '\e846'; } /* '' */
+
+.af-10{	font-size: 10px; }
+.af-12{	font-size: 12px; }
+.af-16{	font-size: 16px; }
+.af-20{	font-size: 20px; }
+.af-23{	font-size: 23px; }
+.af-30{	font-size: 30px; }
+.af-36{	font-size: 36px; }
+.af-40{	font-size: 40px; }
+.af-45{	font-size: 45px; }
+.af-50{	font-size: 50px; }
+.af-100{ font-size: 100px; }
